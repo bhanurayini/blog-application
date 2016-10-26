@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+@import "normalize-rails";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "scaffolds"
+

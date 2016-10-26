@@ -2,8 +2,8 @@
 
 <h1>Posts</h1>
 
-<table>
-  <thead>
+<table class= "table table-condensed table-bordered table-hover ">
+  <thead class="head">
     <tr>
       <th>Title</th>
       <th>Body</th>
@@ -15,7 +15,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.body %></td>
+        <td><%= truncate(post.body) {link_to "see more", post}%></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

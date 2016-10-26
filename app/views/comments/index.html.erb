@@ -2,7 +2,7 @@
 
 <h1>Comments</h1>
 
-<table>
+<table class = "table table-bordered table-hover table-condensed">
   <thead>
     <tr>
       <th>Post</th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.post %></td>
+        <td><%= comment.post_id %></td>
         <td><%= comment.body %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
