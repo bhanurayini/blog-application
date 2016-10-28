@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Post:</strong>
-  <%= @comment.post %>
+  <strong>Post id:</strong>
+  <%= @comment.post_id %>
 </p>
 
 <p>
@@ -10,5 +10,5 @@
   <%= @comment.body %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to '<button class="btn btn-xs btn-default" role="button">Edit</button>'.html_safe, edit_comment_path(@comment) %> 
+<%= link_to '<button class="btn btn-xs btn-default" role="button">Back</button>'.html_safe, comments_path %>

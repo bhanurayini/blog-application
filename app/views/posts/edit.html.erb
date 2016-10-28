@@ -2,5 +2,5 @@
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to '<button class="btn btn-default" role="button">Show</button>'.html_safe, @post %> 
+<%= link_to '<button class="btn btn-default" role="button">Back</button>'.html_safe, posts_path %>

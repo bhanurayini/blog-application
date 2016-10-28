@@ -2,7 +2,7 @@
 
 <h1>Comments</h1>
 
-<table class = "table table-bordered table-hover table-condensed">
+<!--<table class = "table table-bordered table-hover table-condensed">
   <thead>
     <tr>
       <th>Post</th>
@@ -22,8 +22,19 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
-
-<%= link_to 'New Comment', new_comment_path %>
+<div class="Jumbotron">
+<div class="container">
+  <% @comments.each do |comment| %>
+<h4> Post id:<%= comment.post_id %></h4>
+<p><%= truncate(comment.body, length:20) %></p>
+<%= link_to '<button class="btn btn-xs btn-default" role="button">See more</button>'.html_safe, comment%>
+<%= link_to '<button class="btn btn-xs btn-default" role="button">Edit</button>'.html_safe, edit_comment_path(comment) %>
+<%= link_to '<button class="btn btn-xs btn-default" role="button">Destroy</button>'.html_safe, comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+</div> 
+  </div>
+<br>
+<%= link_to '<button class="btn btn-default" role="button">New Comment</button>'.html_safe, new_comment_path %>

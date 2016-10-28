@@ -2,5 +2,5 @@
 
 <%= render 'form', comment: @comment %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to '<button class="btn btn-default" role="button">Show</button>'.html_safe, @comment %> 
+<%= link_to '<button class="btn btn-default" role="button">Back</button>'.html_safe, comments_path %>

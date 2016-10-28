@@ -5,5 +5,9 @@ Posted about <%=  time_ago_in_words(comment.created_at) %>
 </strong>
 <br>
 <%= h(comment.body)%>
+<br>
+<br>
+<%= link_to '<button class="btn btn-xs btn-default" role="button">Edit</button>'.html_safe, edit_comment_path(comment) %>
+<%= link_to '<button class="btn btn-xs btn-default" role="button">Destroy</button>'.html_safe, comment, method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>
 <% end %>
